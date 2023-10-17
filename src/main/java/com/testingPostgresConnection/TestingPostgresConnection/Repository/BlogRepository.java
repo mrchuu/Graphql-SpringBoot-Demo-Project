@@ -17,7 +17,7 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
             "LEFT JOIN Comment c " +
             "on (:sortType IS NOT NULL AND b.blog_id = c.blog_id) " +
             "AND (:sortType IS NULL " +
-            "OR (:sortType = 'mostPopularInDay' AND DATE(c.create_date) >= CURRENT_DATE - Interval '24 hours') " +
+            "OR (:sortType = 'mostPopularInDay' AND c.create_date >= current_timestamp  - Interval '24 hours') " +
             "OR (:sortType = 'mostPopularInWeek' AND DATE_TRUNC('WEEK', c.create_date) = DATE_TRUNC('WEEK', CURRENT_DATE))) " +
             "Where (:searchValue is Null or b.title like %:searchValue%) " +
             "GROUP BY c.blog_id, b.blog_id, b.content, b.post_date, b.user_id, b.title " +

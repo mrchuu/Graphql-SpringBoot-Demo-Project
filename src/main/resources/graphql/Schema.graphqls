@@ -7,12 +7,7 @@ type Users{
     password: String
     commentMade: [Comment]
 }
-#type Blog{
-#    blogId: ID
-#    content: String
-#    postDate: String
-#    poster: Users
-#}
+
 
 input BlogInput {
     content: String
