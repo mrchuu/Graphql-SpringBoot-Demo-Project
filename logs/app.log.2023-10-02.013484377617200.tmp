@@ -1,0 +1,425 @@
+2023-10-02 15:38:14.910  INFO 8664 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 8664 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 15:38:14.912  INFO 8664 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 15:38:15.457  INFO 8664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 15:38:15.470  INFO 8664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-10-02 15:38:16.059  INFO 8664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 15:38:16.067  INFO 8664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 15:38:16.068  INFO 8664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 15:38:16.169  INFO 8664 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 15:38:16.169  INFO 8664 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1207 ms
+2023-10-02 15:38:16.420  INFO 8664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 15:38:16.568  INFO 8664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 15:38:16.682  INFO 8664 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 15:38:16.799  INFO 8664 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 15:38:16.910 ERROR 8664 --- [main] liquibase.parser                         : Premature end of file.
+2023-10-02 15:38:16.914  INFO 8664 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 15:38:16.923  WARN 8664 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 1 column 1 of classpath:db/db.changelog-root.xml: Premature end of file.
+2023-10-02 15:38:16.923  INFO 8664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 15:38:16.934  INFO 8664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 15:38:16.937  INFO 8664 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-02 15:38:16.946  INFO 8664 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-02 15:38:16.961 ERROR 8664 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 1 column 1 of classpath:db/db.changelog-root.xml: Premature end of file.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
+	at com.testingPostgresConnection.TestingPostgresConnection.TestingPostgresConnectionApplication.main(TestingPostgresConnectionApplication.java:10) ~[classes/:na]
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 1 column 1 of classpath:db/db.changelog-root.xml: Premature end of file.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:113) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.getDatabaseChangeLog(Liquibase.java:369) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:224) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 18 common frames omitted
+Caused by: org.xml.sax.SAXParseException: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1013) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637) ~[na:na]
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:105) ~[liquibase-core-4.9.1.jar:na]
+	... 32 common frames omitted
+
+2023-10-02 15:38:30.909  INFO 2592 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 2592 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 15:38:30.912  INFO 2592 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 15:38:31.448  INFO 2592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 15:38:31.463  INFO 2592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-10-02 15:38:32.024  INFO 2592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 15:38:32.039  INFO 2592 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 15:38:32.040  INFO 2592 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 15:38:32.168  INFO 2592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 15:38:32.169  INFO 2592 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1210 ms
+2023-10-02 15:38:32.369  INFO 2592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 15:38:32.518  INFO 2592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 15:38:32.622  INFO 2592 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 15:38:32.703  INFO 2592 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 15:38:32.777 ERROR 2592 --- [main] liquibase.parser                         : Premature end of file.
+2023-10-02 15:38:32.779  INFO 2592 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 15:38:32.785  WARN 2592 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 1 column 1 of classpath:db/db.changelog-root.xml: Premature end of file.
+2023-10-02 15:38:32.786  INFO 2592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 15:38:32.845  INFO 2592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 15:38:32.850  INFO 2592 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-02 15:38:32.861  INFO 2592 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-02 15:38:32.885 ERROR 2592 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 1 column 1 of classpath:db/db.changelog-root.xml: Premature end of file.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
+	at com.testingPostgresConnection.TestingPostgresConnection.TestingPostgresConnectionApplication.main(TestingPostgresConnectionApplication.java:10) ~[classes/:na]
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 1 column 1 of classpath:db/db.changelog-root.xml: Premature end of file.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:113) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.getDatabaseChangeLog(Liquibase.java:369) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:224) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 18 common frames omitted
+Caused by: org.xml.sax.SAXParseException: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1013) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637) ~[na:na]
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:105) ~[liquibase-core-4.9.1.jar:na]
+	... 32 common frames omitted
+
+2023-10-02 15:42:39.351  INFO 10088 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 10088 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 15:42:39.353  INFO 10088 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 15:42:39.846  INFO 10088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 15:42:39.859  INFO 10088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-10-02 15:42:40.345  INFO 10088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 15:42:40.353  INFO 10088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 15:42:40.353  INFO 10088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 15:42:40.444  INFO 10088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 15:42:40.444  INFO 10088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1043 ms
+2023-10-02 15:42:40.638  INFO 10088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 15:42:40.878  INFO 10088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 15:42:40.976  INFO 10088 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 15:42:41.046  INFO 10088 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 15:42:41.410  INFO 10088 --- [main] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2023-10-02 15:42:41.424  INFO 10088 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-10-02 15:42:41.475  INFO 10088 --- [main] liquibase.changelog                      : SQL in file /db/sql/example.sql executed
+2023-10-02 15:42:41.476  INFO 10088 --- [main] liquibase.changelog                      : ChangeSet db/changelogs/Initial.xml::initial.01::chuson ran successfully in 12ms
+2023-10-02 15:42:41.481  INFO 10088 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 15:42:41.566  INFO 10088 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 15:42:41.622  INFO 10088 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 15:42:41.791  INFO 10088 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 15:42:41.883  INFO 10088 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-10-02 15:42:42.022  INFO 10088 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 15:42:42.031  INFO 10088 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 15:42:42.061  WARN 10088 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-02 15:42:42.343  WARN 10088 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2023-10-02 15:42:42.345  INFO 10088 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 15:42:42.347  INFO 10088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 15:42:42.350  INFO 10088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 15:42:42.353  INFO 10088 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-02 15:42:42.365  INFO 10088 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-02 15:42:42.379 ERROR 10088 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-10-02 15:43:01.437  INFO 20568 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 20568 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 15:43:01.439  INFO 20568 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 15:43:01.921  INFO 20568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 15:43:01.934  INFO 20568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-10-02 15:43:02.513  INFO 20568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 15:43:02.521  INFO 20568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 15:43:02.522  INFO 20568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 15:43:02.629  INFO 20568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 15:43:02.629  INFO 20568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2023-10-02 15:43:02.830  INFO 20568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 15:43:02.960  INFO 20568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 15:43:03.058  INFO 20568 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 15:43:03.143  INFO 20568 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 15:43:03.531  INFO 20568 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-10-02 15:43:03.558  INFO 20568 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 15:43:03.631  INFO 20568 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 15:43:03.669  INFO 20568 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 15:43:03.807  INFO 20568 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 15:43:03.886  INFO 20568 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-10-02 15:43:04.030  INFO 20568 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 15:43:04.038  INFO 20568 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 15:43:04.070  WARN 20568 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-02 15:43:04.338  WARN 20568 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2023-10-02 15:43:04.339  INFO 20568 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 15:43:04.342  INFO 20568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 15:43:04.348  INFO 20568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 15:43:04.350  INFO 20568 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-02 15:43:04.361  INFO 20568 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-02 15:43:04.374 ERROR 20568 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-10-02 15:43:41.502  INFO 8700 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 8700 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 15:43:41.504  INFO 8700 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 15:43:42.046  INFO 8700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 15:43:42.060  INFO 8700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-10-02 15:43:42.612  INFO 8700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 15:43:42.619  INFO 8700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 15:43:42.619  INFO 8700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 15:43:42.719  INFO 8700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 15:43:42.720  INFO 8700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1167 ms
+2023-10-02 15:43:42.931  INFO 8700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 15:43:43.054  INFO 8700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 15:43:43.165  INFO 8700 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 15:43:43.258  INFO 8700 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 15:43:43.632  INFO 8700 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-10-02 15:43:43.668  INFO 8700 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 15:43:43.763  INFO 8700 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 15:43:43.800  INFO 8700 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 15:43:43.949  INFO 8700 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 15:43:44.030  INFO 8700 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-10-02 15:43:44.161  INFO 8700 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 15:43:44.171  INFO 8700 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 15:43:44.216  WARN 8700 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-02 15:43:44.494  WARN 8700 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2023-10-02 15:43:44.496  INFO 8700 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 15:43:44.498  INFO 8700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 15:43:44.503  INFO 8700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 15:43:44.505  INFO 8700 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-02 15:43:44.517  INFO 8700 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-02 15:43:44.529 ERROR 8700 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-10-02 15:46:51.085  INFO 18620 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 18620 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 15:46:51.088  INFO 18620 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 15:46:51.713  INFO 18620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 15:46:51.730  INFO 18620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2023-10-02 15:46:52.300  INFO 18620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 15:46:52.310  INFO 18620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 15:46:52.310  INFO 18620 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 15:46:52.410  INFO 18620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 15:46:52.411  INFO 18620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1280 ms
+2023-10-02 15:46:52.621  INFO 18620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 15:46:52.745  INFO 18620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 15:46:52.858  INFO 18620 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 15:46:52.951  INFO 18620 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 15:46:53.331  INFO 18620 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-10-02 15:46:53.359  INFO 18620 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 15:46:53.434  INFO 18620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 15:46:53.471  INFO 18620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 15:46:53.625  INFO 18620 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 15:46:53.709  INFO 18620 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-10-02 15:46:53.848  INFO 18620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 15:46:53.857  INFO 18620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 15:46:53.894  WARN 18620 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-02 15:46:54.218  INFO 18620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-02 15:46:54.226  INFO 18620 --- [main] t.T.TestingPostgresConnectionApplication : Started TestingPostgresConnectionApplication in 3.548 seconds (JVM running for 3.933)
+2023-10-02 16:31:06.429  WARN 18620 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m13s437ms348µs).
+2023-10-02 16:35:15.490  WARN 18620 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s58ms515µs900ns).
+2023-10-02 16:38:03.365  INFO 18620 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 16:38:03.368  INFO 18620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 16:38:03.383  INFO 18620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 16:38:12.054  INFO 6272 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 6272 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 16:38:12.059  INFO 6272 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 16:38:13.332  INFO 6272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 16:38:13.438  INFO 6272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interfaces.
+2023-10-02 16:38:14.664  INFO 6272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 16:38:14.681  INFO 6272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 16:38:14.683  INFO 6272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 16:38:14.908  INFO 6272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 16:38:14.909  INFO 6272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2752 ms
+2023-10-02 16:38:15.327  INFO 6272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 16:38:15.620  INFO 6272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 16:38:15.871  INFO 6272 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 16:38:16.076  INFO 6272 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 16:38:16.992  INFO 6272 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-10-02 16:38:17.069  INFO 6272 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 16:38:17.258  INFO 6272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 16:38:17.346  INFO 6272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 16:38:17.773  INFO 6272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 16:38:17.997  INFO 6272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-10-02 16:38:18.867  INFO 6272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 16:38:18.879  INFO 6272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 16:38:18.890  WARN 6272 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes\com\testingPostgresConnection\TestingPostgresConnection\Controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.testingPostgresConnection.TestingPostgresConnection.Service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-02 16:38:18.890  INFO 6272 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 16:38:18.893  INFO 6272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 16:38:18.901  INFO 6272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 16:38:18.905  INFO 6272 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-02 16:38:18.925  INFO 6272 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-02 16:38:18.957 ERROR 6272 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.testingPostgresConnection.TestingPostgresConnection.Controller.UserController required a bean of type 'com.testingPostgresConnection.TestingPostgresConnection.Service.UserService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.testingPostgresConnection.TestingPostgresConnection.Service.UserService' in your configuration.
+
+2023-10-02 16:40:36.858  INFO 2016 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 2016 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 16:40:36.863  INFO 2016 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 16:40:37.816  INFO 2016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 16:40:37.905  INFO 2016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interfaces.
+2023-10-02 16:40:38.831  INFO 2016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 16:40:38.843  INFO 2016 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 16:40:38.843  INFO 2016 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 16:40:39.063  INFO 2016 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 16:40:39.064  INFO 2016 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2115 ms
+2023-10-02 16:40:39.421  INFO 2016 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 16:40:39.704  INFO 2016 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 16:40:39.918  INFO 2016 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 16:40:40.092  INFO 2016 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 16:40:40.795  INFO 2016 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-10-02 16:40:40.858  INFO 2016 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 16:40:41.004  INFO 2016 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 16:40:41.075  INFO 2016 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 16:40:41.337  INFO 2016 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 16:40:41.504  INFO 2016 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-10-02 16:40:42.230  INFO 2016 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 16:40:42.246  INFO 2016 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 16:40:42.690  WARN 2016 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-02 16:40:43.209  INFO 2016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-02 16:40:43.226  INFO 2016 --- [main] t.T.TestingPostgresConnectionApplication : Started TestingPostgresConnectionApplication in 7.088 seconds (JVM running for 7.781)
+2023-10-02 16:40:46.205  INFO 2016 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 16:40:46.208  INFO 2016 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 16:40:46.223  INFO 2016 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 16:41:49.712  INFO 19708 --- [main] t.T.TestingPostgresConnectionApplication : Starting TestingPostgresConnectionApplication using Java 17.0.8 on LAPTOP-SKI0L2KK with PID 19708 (E:\Spring boot\Intern Viettel\TestingPostgresConnection\target\classes started by FPT in E:\Spring boot\Intern Viettel\TestingPostgresConnection)
+2023-10-02 16:41:49.716  INFO 19708 --- [main] t.T.TestingPostgresConnectionApplication : The following 1 profile is active: "local"
+2023-10-02 16:41:50.663  INFO 19708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 16:41:50.741  INFO 19708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
+2023-10-02 16:41:51.735  INFO 19708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-02 16:41:51.750  INFO 19708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 16:41:51.750  INFO 19708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-02 16:41:51.950  INFO 19708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 16:41:51.951  INFO 19708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2157 ms
+2023-10-02 16:41:52.309  INFO 19708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 16:41:52.572  INFO 19708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 16:41:52.775  INFO 19708 --- [main] liquibase.database                       : Set default schema name to public
+2023-10-02 16:41:52.942  INFO 19708 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2023-10-02 16:41:53.584  INFO 19708 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2023-10-02 16:41:53.649  INFO 19708 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2023-10-02 16:41:53.810  INFO 19708 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 16:41:53.881  INFO 19708 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 16:41:54.150  INFO 19708 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 16:41:54.305  INFO 19708 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-10-02 16:41:55.006  INFO 19708 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 16:41:55.019  INFO 19708 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 16:41:55.452  WARN 19708 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-02 16:41:55.895  INFO 19708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-02 16:41:55.911  INFO 19708 --- [main] t.T.TestingPostgresConnectionApplication : Started TestingPostgresConnectionApplication in 6.91 seconds (JVM running for 7.587)
+2023-10-02 16:42:17.252  INFO 19708 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 16:42:17.252  INFO 19708 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 16:42:17.254  INFO 19708 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 16:52:43.687  WARN 19708 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s895ms318µs).
+2023-10-02 20:26:39.858  WARN 19708 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30m26s162ms251µs400ns).
+2023-10-02 20:29:50.042  INFO 19708 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 20:29:50.043  INFO 19708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 20:29:50.047  INFO 19708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,7 @@
+type Comment{
+    commentId: ID!
+    user: Users
+    blog: Blog
+    content: String
+    createDate: String
+}

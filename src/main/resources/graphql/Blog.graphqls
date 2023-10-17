@@ -1,0 +1,26 @@
+type Blog{
+    blogId: ID
+    content: String
+    postDate: String
+    poster: Users
+    comment: [Comment]
+    title: String
+}
+type PageInfo{
+    index: Int
+    size: Int
+    isLast: Boolean
+    isFirst: Boolean
+    maxPages: Int
+    maxElements: Int
+}
+type BlogPageResponse{
+    data: [Blog]
+    pageInfo: PageInfo
+}
+input BlogDisplayInput{
+    index: Int
+    size: Int
+    sortType: String
+    searchValue: String
+}

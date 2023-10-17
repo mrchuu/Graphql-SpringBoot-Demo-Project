@@ -1,0 +1,40 @@
+type Users{
+    userId: ID!
+    userName: String
+    email:String
+    lastVisit: String
+    blogList: [Blog]
+    password: String
+    commentMade: [Comment]
+}
+#type Blog{
+#    blogId: ID
+#    content: String
+#    postDate: String
+#    poster: Users
+#}
+
+input BlogInput {
+    content: String
+    poster: ID!
+}
+
+input UsersInput {
+    userId: ID!
+    userName: String
+    email:String
+    lastVisit: String
+    blogList: [BlogInput]
+    password: String
+}
+type Query{
+    getAllUsers: [Users]!
+    findUserById(userId: ID): Users
+    "hehe"
+    getBlogsPaginated(input: BlogDisplayInput): BlogPageResponse
+}
+
+type Mutation{
+    addBlog(input: BlogInput): Blog
+
+}

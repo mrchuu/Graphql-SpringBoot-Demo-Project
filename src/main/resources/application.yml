@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/db.changelog-root.xml
+  graphql:
+    enabled: true
+    cors:
+      allow-credentials: false
+      allowed-origins:
+        - "*"
+    schema:
+      locations: classpath:graphql/**
+    voyager:
+      mapping: /voyager
+    graphiql:
+      enabled: true
+      path: graphiql
+
+
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+
+  profiles:
+    active: local
