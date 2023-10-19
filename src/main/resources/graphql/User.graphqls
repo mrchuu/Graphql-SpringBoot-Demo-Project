@@ -8,12 +8,6 @@ type Users{
     commentMade: [Comment]
 }
 
-
-input BlogInput {
-    content: String
-    poster: ID!
-}
-
 input UsersInput {
     userId: ID!
     userName: String
@@ -21,15 +15,4 @@ input UsersInput {
     lastVisit: String
     blogList: [BlogInput]
     password: String
-}
-type Query{
-    getAllUsers: [Users]!
-    findUserById(userId: ID): Users
-    "hehe"
-    getBlogsPaginated(input: BlogDisplayInput): BlogPageResponse
-}
-
-type Mutation{
-    addBlog(input: BlogInput): Blog
-
 }

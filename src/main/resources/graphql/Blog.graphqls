@@ -18,6 +18,10 @@ type BlogPageResponse{
     data: [Blog]
     pageInfo: PageInfo
 }
+input BlogInput {
+    content: String
+    poster: ID!
+}
 input BlogDisplayInput{
     index: Int
     size: Int
